@@ -7,7 +7,13 @@ class User < ApplicationRecord
   has_many :trainee_tasks
   has_many :reports
 
+  has_many :active_admin_courses, class_name: User.name,
+           foreign_key: :supervisor_id, dependent: :destroy
+  has_many :monitorings, through: :active_admin_courses, source: :monitoring
+
   enum role: [:trainee, :supervisor]
 
-  scope :members, ->{select(:id, :name, :email, :address, :phone).where role: 1}
+  scope :accounts, ->{select(:id, :name, :email, :address, :phone)}
+
+  scope :members, ->{accounts.trainee}
 end

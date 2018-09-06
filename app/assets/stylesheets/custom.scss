@@ -228,3 +228,12 @@ footer {
 .info-member {
   padding-left: 10px;
 }
+
+label.required:after{
+  content:" *";
+  color: $red;
+}
+
+.field {
+  width: 50%;
+}

@@ -1,0 +1,21 @@
+<div class="col-md-6">
+  <%= form_for [:supervisor, @course] do |f| %>
+    <%= f.label :name, t(".name"), class: "required" %>
+    <%= f.text_field :name, required: true, class: "form-control" %>
+
+    <%= f.label :description, t(".description"), class: "required" %>
+    <%= f.text_area :description, required: true, class: "form-control" %>
+
+    <div class="field">
+      <%= f.label :start_time, class: "required" %>
+      <%= f.date_field :start_time, required: true, class:"datepicker form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :end_time, class: "required" %>
+      <%= f.date_field :end_time, required: true, class:"datepicker form-control" %>
+    </div>
+
+    <%= f.submit t(".create"), class: "btn btn-primary" %>
+  <% end %>
+</div>
