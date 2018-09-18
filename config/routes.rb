@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :users, only: [:show]
     get "/members", to: "users#all_users"
     resources :reports, only: [:index, :new, :create]
+    resources :courses, only: [:index, :show]
   end
   namespace :supervisor do
     resources :courses do
@@ -16,5 +17,6 @@ Rails.application.routes.draw do
     resources :users
     get "/supervisors", to: "users#all_supervisors"
     resources :reports, only: :index
+    resources :user_courses, only: %i(create update destroy)
   end
 end

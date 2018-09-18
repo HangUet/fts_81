@@ -1,4 +1,5 @@
 class TraineeSubject < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, foreign_key: :trainee_id
   belongs_to :subject
+  enum status: {start: 0, inprogress: 1, finish: 2}
 end
