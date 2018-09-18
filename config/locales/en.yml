@@ -35,6 +35,8 @@ en:
       label_course: "Course"
       name_course: "Course example"
       short_description: "This course about...."
+      subject_not_found: "Subject not found!"
+      task_not_found: "Task not found!"
   trainee:
     users:
       show:
@@ -65,6 +67,14 @@ en:
       create:
         success: "Send report successfully!"
         failure: "Send report failure!"
+    courses:
+      index:
+        my_courses: "My courses"
+        course: "Course"
+        subjects: "Subjects"
+        supervisors: "Supervisors"
+        view_progress: "View progress"
+        your_progress: "Your progress"
   shared:
     error_messages:
       form_error_warning:
@@ -171,6 +181,23 @@ en:
         edit: "Edit"
         success: "Successfully updated course!"
         failure: "Update course failure!"
+        supervisors: "Supervisors"
+        trainees: "Trainees"
+        name: "Name"
+        email: "Email"
+        option: "Action"
+        not_found: "Not found this course"
+      update:
+        update_success: "Successfully updated course!"
+        update_fail: "Update course failure!"
+      destroy:
+        success: "Delete successfully"
+        failure: "Delete course fail"
+      add_user:
+        btn_submit: "Assign"
+      button:
+        remove_user:
+          btn_submit: "Remove"
       destroy:
         success: "Delete successfully!"
         failure: "Delete course failure"
